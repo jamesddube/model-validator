@@ -26,10 +26,5 @@
     "psr-4": {
       "Intersect\\Test\\": "test/Intersect/"
     }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0"
-    }
   }
 }
