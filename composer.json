@@ -1,0 +1,35 @@
+{
+  "name": "Intersect/ModelValidator",
+  "type": "library",
+  "description": "Validate Laravel Models on demand",
+  "keywords": ["laravel", "models", "validation"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "James Dube"
+    }
+  ],
+  "require": {
+    "php": "^5.6"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.0",
+    "squizlabs/php_codesniffer": "~1.5",
+    "ext-intl": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Intersect\\": "src/Intersect/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Intersect\\Test\\": "test/Intersect/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0"
+    }
+  }
+}
