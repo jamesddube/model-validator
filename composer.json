@@ -1,5 +1,5 @@
 {
-  "name": "Intersect/ModelValidator",
+  "name": "intersect/model-validator",
   "type": "library",
   "description": "Validate Laravel Models on demand",
   "keywords": ["laravel", "models", "validation"],
