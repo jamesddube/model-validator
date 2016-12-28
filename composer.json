@@ -26,5 +26,7 @@
     "psr-4": {
       "Intersect\\Test\\": "test/Intersect/"
     }
-  }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable" : true
 }
