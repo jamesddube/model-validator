@@ -1,5 +1,8 @@
 <?php
 
+namespace Intersect\Validators;
+use Validator;
+
 trait ModelValidator
 {
     /**
@@ -20,6 +23,12 @@ trait ModelValidator
     }
 
 
+    /**
+     * Validate the Model against its set rules
+     *
+     * @param string $key
+     * @return bool
+     */
     public function validate($key = 'default')
     {
         $this->validateRules($key);
@@ -29,11 +38,21 @@ trait ModelValidator
         return $this->validator->fails() ? false : true;
     }
 
+    /**
+     * Get the validation errors
+     *
+     * @return \Illuminate\Support\MessageBag
+     */
     public function getValidationErrors(){
 
         return $this->validator->errors();
     }
 
+    /**
+     * Bootstrap the Model validator
+     *
+     * @throws \Exception
+     */
     private function init(){
 
         if(class_exists($this->modelRules)){
@@ -53,6 +72,12 @@ trait ModelValidator
 
     }
 
+    /**
+     * Validate the rules property on the model
+     *
+     * @param $key
+     * @throws \Exception
+     */
     private function validateRules($key){
         if(!array_has($this->validationRules,$key) OR !is_array($this->validationRules[$key])){
             throw new \Exception('rules['.$key.'] is not a valid array');
